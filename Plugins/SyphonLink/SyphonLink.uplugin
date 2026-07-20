@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "SyphonLink",
+	"Description": "Syphon for UE5",
+	"Category": "Other",
+	"CreatedBy": "Yoshitsugu Kosaka",
+	"CreatedByURL": "https://github.com/Yoshie026/UE5-Syphon",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "SyphonLink",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
