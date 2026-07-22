@@ -1,3 +1,4 @@
+// Copyright 2026 Yoshitsugu Kosaka. All Rights Reserved.
 #include "SyphonServerComponent.h"
 #include "Components/SceneCaptureComponent2D.h"
 #include "Engine/TextureRenderTarget2D.h"

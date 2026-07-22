@@ -1,3 +1,4 @@
+// Copyright 2026 Yoshitsugu Kosaka. All Rights Reserved.
 #if PLATFORM_MAC
 #include "SyphonServerBridge.h"
 #import <Syphon/Syphon.h>

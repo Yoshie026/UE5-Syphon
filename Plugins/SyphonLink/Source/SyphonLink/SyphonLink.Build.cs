@@ -1,3 +1,4 @@
+// Copyright 2026 Yoshitsugu Kosaka. All Rights Reserved.
 using UnrealBuildTool;
 using System.IO;
 

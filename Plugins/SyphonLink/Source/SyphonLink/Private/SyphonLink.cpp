@@ -1,3 +1,4 @@
+// Copyright 2026 Yoshitsugu Kosaka. All Rights Reserved.
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "SyphonLink.h"

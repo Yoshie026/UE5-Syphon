@@ -3,13 +3,14 @@
 	"Version": 1,
 	"VersionName": "1.0",
 	"FriendlyName": "SyphonLink",
-	"Description": "Syphon for UE5",
+	"Description": "Syphon server plugin for Unreal Engine 5 (macOS/Metal)",
 	"Category": "Other",
 	"CreatedBy": "Yoshitsugu Kosaka",
 	"CreatedByURL": "https://github.com/Yoshie026/UE5-Syphon",
-	"DocsURL": "",
+	"DocsURL": "https://github.com/Yoshie026/UE5-Syphon",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "https://github.com/Yoshie026/UE5-Syphon/issues",
+	"EngineVersion": "5.8.0",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
@@ -18,7 +19,10 @@
 		{
 			"Name": "SyphonLink",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Mac"
+			]
 		}
 	]
 }
