@@ -1,8 +1,11 @@
 // Copyright 2026 Yoshitsugu Kosaka. All Rights Reserved.
 #if PLATFORM_MAC
 #include "SyphonServerBridge.h"
+#include "Apple/PreAppleSystemHeaders.h"
 #import <Syphon/Syphon.h>
 #import <Metal/Metal.h>
+#include "Apple/PostAppleSystemHeaders.h"
+
 
 static SyphonMetalServer* GTestServer = nil;
 static id<MTLDevice> GMetalDevice = nil;
