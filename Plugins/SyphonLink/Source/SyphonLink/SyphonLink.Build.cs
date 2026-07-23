@@ -15,7 +15,7 @@ public class SyphonLink : ModuleRules
         {
             PublicFrameworks.AddRange(new string[] { "Metal", "IOSurface" });
 
-            string SyphonPath = Path.Combine(ModuleDirectory, "ThirdParty", "Syphon");
+            string SyphonPath = Path.Combine(ModuleDirectory, "..", "ThirdParty", "Syphon");
             string FrameworkPath = Path.Combine(SyphonPath, "Syphon.framework");
 
             PublicIncludePaths.Add(Path.Combine(SyphonPath, "include"));
