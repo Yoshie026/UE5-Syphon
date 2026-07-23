@@ -1,46 +1,32 @@
-// Copyright 2026 Yoshitsugu Kosaka. All Rights Reserved.
-#if PLATFORM_MAC
-#include "SyphonServerBridge.h"
-#include "Apple/PreAppleSystemHeaders.h"
+#include "SyphonServerBridge_C.h"
 #import <Syphon/Syphon.h>
 #import <Metal/Metal.h>
-#include "Apple/PostAppleSystemHeaders.h"
-
 
 static SyphonMetalServer* GTestServer = nil;
 static id<MTLDevice> GMetalDevice = nil;
 static id<MTLCommandQueue> GQueue = nil;
 
-void FSyphonServerBridge::Start(const FString& ServerName)
+void Syphon_Start(const char* ServerName)
 {
     if (GTestServer) return;
-
     GMetalDevice = MTLCreateSystemDefaultDevice();
     GQueue = [GMetalDevice newCommandQueue];
-
-    NSString* Name = [NSString stringWithUTF8String:TCHAR_TO_UTF8(*ServerName)];
-    GTestServer = [[SyphonMetalServer alloc] initWithName:Name
-                                                   device:GMetalDevice
-                                                  options:nil];
+    NSString* Name = [NSString stringWithUTF8String:ServerName];
+    GTestServer = [[SyphonMetalServer alloc] initWithName:Name device:GMetalDevice options:nil];
 }
 
-void FSyphonServerBridge::PublishTexture(void* MetalTexturePtr, int Width, int Height)
+void Syphon_PublishTexture(void* MetalTexturePtr, int Width, int Height)
 {
     if (!GTestServer || !MetalTexturePtr) return;
     id<MTLTexture> Texture = (__bridge id<MTLTexture>)MetalTexturePtr;
     id<MTLCommandBuffer> CB = [GQueue commandBuffer];
-    [GTestServer publishFrameTexture:Texture
-                     onCommandBuffer:CB
-                         imageRegion:NSMakeRect(0, 0, Width, Height)
-                             flipped:YES];
+    [GTestServer publishFrameTexture:Texture onCommandBuffer:CB
+                         imageRegion:NSMakeRect(0, 0, Width, Height) flipped:YES];
     [CB commit];
 }
 
-void FSyphonServerBridge::Stop()
+void Syphon_Stop(void)
 {
     [GTestServer stop];
-    GTestServer = nil;
-    GQueue = nil;
-    GMetalDevice = nil;
+    GTestServer = nil; GQueue = nil; GMetalDevice = nil;
 }
-#endif

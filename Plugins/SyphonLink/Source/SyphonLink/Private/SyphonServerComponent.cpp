@@ -5,6 +5,8 @@
 #include "Camera/CameraComponent.h"
 #include "CineCameraComponent.h"
 #include "RenderingThread.h"
+#include "Engine/Engine.h"
+#include "TextureResource.h"
 #if PLATFORM_MAC
 #include "SyphonServerBridge.h"
 #endif

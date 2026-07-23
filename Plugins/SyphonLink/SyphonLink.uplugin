@@ -19,10 +19,7 @@
 		{
 			"Name": "SyphonLink",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"PlatformAllowList": [
-				"Mac"
-			]
+			"LoadingPhase": "Default"
 		}
 	]
 }

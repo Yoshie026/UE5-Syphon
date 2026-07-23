@@ -6,7 +6,7 @@ public class SyphonLink : ModuleRules
 {
     public SyphonLink(ReadOnlyTargetRules Target) : base(Target)
     {
-        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+        PCHUsage = ModuleRules.PCHUsageMode.NoPCHs;
 
         PublicDependencyModuleNames.AddRange(new string[]
             { "Core", "CoreUObject", "Engine", "RHI", "RenderCore","CinematicCamera" });
