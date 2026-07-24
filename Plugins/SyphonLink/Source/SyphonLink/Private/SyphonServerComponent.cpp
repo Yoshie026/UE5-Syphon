@@ -8,7 +8,7 @@
 #include "Engine/Engine.h"
 #include "TextureResource.h"
 #if PLATFORM_MAC
-#include "SyphonServerBridge.h"
+#include "Mac/SyphonServerBridge.h"
 #endif
 
 USyphonServerComponent::USyphonServerComponent()

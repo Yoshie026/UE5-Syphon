@@ -2,13 +2,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class SyphonePluginEditorTarget : TargetRules
+public class SyphonPluginEditorTarget : TargetRules
 {
-	public SyphonePluginEditorTarget( TargetInfo Target) : base(Target)
+	public SyphonPluginEditorTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V7;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_8;
-		ExtraModuleNames.Add("SyphonePlugin");
+		ExtraModuleNames.Add("SyphonPlugin");
 	}
 }

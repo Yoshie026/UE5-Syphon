@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class SyphonePlugin : ModuleRules
+public class SyphonPlugin : ModuleRules
 {
-	public SyphonePlugin(ReadOnlyTargetRules Target) : base(Target)
+	public SyphonPlugin(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 

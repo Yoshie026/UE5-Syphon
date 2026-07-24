@@ -5,7 +5,7 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "SyphonePlugin",
+			"Name": "SyphonPlugin",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

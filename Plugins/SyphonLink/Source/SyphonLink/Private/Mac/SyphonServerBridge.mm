@@ -1,3 +1,4 @@
+// Copyright 2026 Yoshitsugu Kosaka. All Rights Reserved.
 #include "SyphonServerBridge_C.h"
 #import <Syphon/Syphon.h>
 #import <Metal/Metal.h>
